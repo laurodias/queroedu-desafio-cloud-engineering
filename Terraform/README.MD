@@ -16,14 +16,14 @@ Outputs: A execução deve imprimir o IP público da instância
 Pré-instalar o docker na instância que suba automaticamente a imagem do Apache, tornando a página padrão da ferramenta visualizável ao acessar o IP público da instância
 Utilização de módulos do Terraform
 
-#### Instruções para execução
+### Instruções para execução
 Todos os passos necessários para criação da instância estão no arquivo main.tf.
 As informações abaixo são relevantes para a correta execução do processo:
 
-# Chave de Acesso
+#### Chave de Acesso
 As credenciais de acesso à console do AWS precisam ser configuradas previamente, pois nenhuma informação sensível, como secret key ou access key, estão explicitamente configuradas no arquivo main.tf.
 
-# Variáveis
+#### Variáveis
   > region: variável de entrada que recebe uma região da AWS onde a instância será criada. Os valores permitidos são:
     ap-northeast-1 (Tokyo)
     ap-northeast-2 (Seoul)
@@ -43,7 +43,7 @@ As credenciais de acesso à console do AWS precisam ser configuradas previamente
     us-west-2 (Oregon)
   > ssh_range: variável de entrada que recebe um endereço de rede CIDR classe C (/24).
   > amis: mapeamento de imagens do sistema operacional Amazon Linx para as regiões suportadas.
-# Dados
+#### Dados
   > aws_vpc: configuração feita para se usar sempre a VPC default da região selecionada.
   > template_cloudinit_config: template do cloud-init para com instruções a serem executadas no primeiro boot da instância.
 
