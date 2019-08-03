@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 /* DATA
- > aws_vpc - gets data from vpc in the selected region to create security group
- > template_cloudinit_config - set of instructions to be executed as user_data, during the instance's first boot
+  aws_vpc - gets data from vpc in the selected region to create security group
+  template_cloudinit_config - set of instructions to be executed as user_data, during the instance's first boot
 */
 data "aws_vpc" "default" {
   default = true
@@ -30,9 +30,9 @@ runcmd:
 }
 
 /* VARIABLES
- > region - region where the instance will be launched
- > ssh_range - cidr to allow ssh access to the instance
- > amis - mapping of ami ids for each region
+  region - region where the instance will be launched
+  ssh_range - cidr to allow ssh access to the instance
+  amis - mapping of ami ids for each region
 */
 
 variable "region" {
@@ -68,6 +68,12 @@ variable "amis" {
     "us-west-2" = "ami-082b5a644766e0e6f"
   }
 }
+
+/* RESOURCES
+  aws_security_group - security group used to allow/restrict access to the instance's services
+  aws_key_pair - public key used to allow SSH login into the instance (must be inserted)
+  aws_instance - instructions to create the instance
+*/
 
 resource "aws_security_group" "queroedu" {
   name = "QueroEdu-SG"
@@ -120,6 +126,10 @@ resource "aws_instance" "queroedu" {
   }
 }
 
+/* OUTPUTS
+  public_ip - the instance's public IP address given by AWS
+  public_dns - the instance's public DNS name given by AWS
+*/
 output "public_ip" {
   value = "${aws_instance.queroedu.public_ip}"
 }
