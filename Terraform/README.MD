@@ -6,10 +6,10 @@ Recursos de infraestrutura em nuvem devem sempre ser criados utilizando gerencia
 #### Objetivo
 Criar uma instância t2.micro (AWS) Linux utilizando Terraform.
 A instância deve ter aberta somente às portas 80 e 443 para todos os endereços
-A porta SSH (22) deve estar acessível somente para um range /24.
+A porta SSH (22) deve estar acessível somente para um range /24.<br>
 Inputs: A execução do projeto deve aceitar dois parâmetros:
 O IP ou range necessário para a liberação da porta SSH
-A região da cloud em que será provisionada a instância
+A região da cloud em que será provisionada a instância<br>
 Outputs: A execução deve imprimir o IP público da instância
 
 #### Extras
@@ -41,7 +41,7 @@ As credenciais de acesso à console do AWS precisam ser configuradas previamente
     eu-north-1 (Stockholm)<br>
     us-west-1 (N. Carolina)<br>
     us-west-2 (Oregon)<br>
-    
+
   * ssh_range: variável de entrada que recebe um endereço de rede CIDR classe C (/24).
   * amis: mapeamento de imagens do sistema operacional Amazon Linx para as regiões suportadas.
 #### Dados
