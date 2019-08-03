@@ -44,8 +44,6 @@ variable "region" {
 variable "ssh_range" {
   type = "string"
   description = "Must be a class C in CIDR format"
-  //default = "(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.0/24)"
-  //default = "/^((d{1,3}).(d{1,3}).(d{1,3}).0/24)$/"
   default = "1.1.1.0/24"
 }
 
@@ -107,7 +105,7 @@ resource "aws_security_group" "queroedu" {
 
 resource "aws_key_pair" "queroedu" {
   key_name = "queroedu-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpF8LzGE25btW2Y73/WPgoAAlMNKgFrtXlIaAaVAuNIYFxZG97Em6nwQw7WY962ZHdQeUqTlDa4W0PEcWBZ9HlbQ8Ksd/Hz4eWANwRR6btb6jCGi3C/kkl/p3DMlDtnzPJJZrqb4tvB2ZqgB+ioX2rg8x3Apk0B59kiWBUmleLExhOO0kyYt0GFaHU+0l1D+TeNNr6WycxJBLjtGuaImfmESzmIOLo52bK+BoWqsg2n9RPs+tTnp++COk5ccI4p1eohAfi8N5m91pCvuX6ksLu6CDU2BQXds8Hc+YxXJMs0cWwwQqFF5D12Kq2vX6hit0FMiWaYfb6AOQrPqk/Jf3H imported-openssh-key"
+  public_key = "PUBLIC_SSH_KEY_HERE"
 }
 
 resource "aws_instance" "queroedu" {
