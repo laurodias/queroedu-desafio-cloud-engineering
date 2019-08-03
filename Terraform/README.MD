@@ -7,9 +7,9 @@ Recursos de infraestrutura em nuvem devem sempre ser criados utilizando gerencia
 Criar uma instância t2.micro (AWS) Linux utilizando Terraform.
 A instância deve ter aberta somente às portas 80 e 443 para todos os endereços
 A porta SSH (22) deve estar acessível somente para um range /24.<br>
-Inputs: A execução do projeto deve aceitar dois parâmetros:
-O IP ou range necessário para a liberação da porta SSH
-A região da cloud em que será provisionada a instância<br>
+Inputs: A execução do projeto deve aceitar dois parâmetros:<br>
+O IP ou range necessário para a liberação da porta SSH<br>
+A região da cloud em que será provisionada a instância.<br>
 Outputs: A execução deve imprimir o IP público da instância
 
 #### Extras
@@ -51,4 +51,4 @@ As credenciais de acesso à console do AWS precisam ser configuradas previamente
 A chave pública RSA para acesso à instância deve ser aplicada no recurso "aws_key_pair", ajustando-se o conteúdo da chave como valor para a chave "public_key".
 
 O comando abaixo deve ser usado para a criação dos recursos:<br>
-  > $ terraform apply -var region=<region> -var ssh_range=<ssh_cidr>
+  > $ terraform apply -var region=\<region\> -var ssh_range=\<ssh_cidr\>
