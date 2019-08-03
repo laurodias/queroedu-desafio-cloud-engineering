@@ -16,10 +16,10 @@ Outputs: A execução deve imprimir o IP público da instância
 Pré-instalar o docker na instância que suba automaticamente a imagem do Apache, tornando a página padrão da ferramenta visualizável ao acessar o IP público da instância
 Utilização de módulos do Terraform
 
-#### Instruções para execução
+## Instruções para execução
 Todos os passos necessários para criação da instância estão no arquivo main.tf.
 As informações abaixo são relevantes para a correta execução do processo:
-  # VARIÁVEIS
+  ### VARIÁVEIS
     > region: variável de entrada que recebe uma região da AWS onde a instância será criada. Os valores permitidos são:
       ap-northeast-1 (Tokyo)
       ap-northeast-2 (Seoul)
