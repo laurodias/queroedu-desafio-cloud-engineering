@@ -8,7 +8,7 @@ ENV USER "node"
 # Preparing and injecting the application to the image
 RUN mkdir /home/node/app
 WORKDIR /home/node/app
-COPY package*.json ./
+COPY package.json ./
 COPY app.js ./
 
 # Installing dependencies
