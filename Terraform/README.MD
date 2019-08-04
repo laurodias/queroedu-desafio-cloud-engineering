@@ -52,3 +52,6 @@ A chave pública RSA para acesso à instância deve ser aplicada no recurso "aws
 
 O comando abaixo deve ser usado para a criação dos recursos:<br>
   > $ terraform apply -var region=\<region\> -var ssh_range=\<ssh_cidr\>
+
+#### Referências
+##### Provider: AWS - Terraform by HashiCorp (https://www.terraform.io/docs/providers/aws/index.html)
