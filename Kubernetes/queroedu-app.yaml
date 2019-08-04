@@ -1,0 +1,55 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: queroedu
+    tier: dev
+  name: queroedu-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: queroedu
+      tier: dev
+  template:
+    metadata:
+      labels:
+        app: queroedu
+        tier: dev
+    spec:
+      containers:
+      - image: queroedu/app:v1.0
+        name: app
+        ports:
+        - containerPort: 3000
+          protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: queroedu-svc
+spec:
+  selector:
+    app: queroedu
+    tier: dev
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: NodePort
+
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: queroedu-ingress
+  namespace: default
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: queroedu-svc
+          servicePort: 3000
