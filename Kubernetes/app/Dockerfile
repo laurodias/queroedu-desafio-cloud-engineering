@@ -5,7 +5,7 @@ FROM node:slim
 ENV NAME "Lauro Dias"
 ENV USER "node"
 
-# Preparing and injecting the application to the image
+# Preparing and injecting the application into the image
 RUN mkdir /home/node/app
 WORKDIR /home/node/app
 COPY package.json ./
