@@ -21,7 +21,7 @@ Todos os passos necessários para criação da instância estão no arquivo main
 As informações abaixo são relevantes para a correta execução do processo:
 
 #### Chave de Acesso
-As credenciais de acesso à console do AWS precisam ser configuradas previamente, pois nenhuma informação sensível, como secret key ou access key, estão explicitamente configuradas no arquivo main.tf.
+As credenciais de acesso à console da AWS precisam ser configuradas previamente, pois nenhuma informação sensível, como secret key ou access key, estão explicitamente configuradas no arquivo main.tf.
 
 #### Variáveis
   * region: variável de entrada que recebe uma região da AWS onde a instância será criada. Os valores permitidos são:<br>
@@ -43,7 +43,7 @@ As credenciais de acesso à console do AWS precisam ser configuradas previamente
     us-west-2 (Oregon)<br>
 
   * ssh_range: variável de entrada que recebe um endereço de rede CIDR classe C (/24).
-  * amis: mapeamento de imagens do sistema operacional Amazon Linx para as regiões suportadas.
+  * amis: mapeamento de imagens do sistema operacional Amazon Linux para as regiões suportadas.
 #### Dados
   * aws_vpc: configuração feita para se usar sempre a VPC default da região selecionada.
   * template_cloudinit_config: template do cloud-init para com instruções a serem executadas no primeiro boot da instância.
