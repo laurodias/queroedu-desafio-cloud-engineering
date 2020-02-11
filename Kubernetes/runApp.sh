@@ -3,10 +3,10 @@
 # Name: runApp.sh
 # Version: 1.0
 # Description: Prepare and run a basic application on Kubernetes
-#       1. Build a docker image after inject the application files
-#       2. Create necessary resouruces to run the application
-#       3. Deploy the application
-#       4. Show a output with informations to access
+#       1. Builds a docker image after inject the application files
+#       2. Creates necessary resouruces to run the application
+#       3. Deploys the application
+#       4. Shows an output with informations to access
 #
 
 dockerbin=$(whereis -b docker |awk '{print $2}')
