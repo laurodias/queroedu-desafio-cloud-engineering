@@ -45,7 +45,7 @@ As credenciais de acesso à console da AWS precisam ser configuradas previamente
   * amis: mapeamento de imagens do sistema operacional Amazon Linux para as regiões suportadas.
 #### Dados
   * aws_vpc: configuração feita para se usar sempre a VPC default da região selecionada.
-  * template_cloudinit_config: template do cloud-init para com instruções a serem executadas no primeiro boot da instância.
+  * template_cloudinit_config: template do cloud-init com instruções a serem executadas no primeiro boot da instância.
 
 A chave pública RSA para acesso à instância deve ser aplicada no recurso "aws_key_pair", ajustando-se o conteúdo da chave como valor para a chave "public_key".
 
@@ -57,7 +57,7 @@ O comando abaixo deve ser usado para a criação dos recursos:<br>
 
 ### Instruções para execução - Desafio 02
 O processo de building e deploy da aplicação se dá através do script runApp.sh. Como pré-requisito, o Kubernetes deve estar instalado e em execução. Após fazer o clone do repositório, acessar o diretório ./Kubernetes e executar o comando:
-> ./runAs.sh
+> ./runApp.sh
 
 O script executará os seguintes passos:
 1. Build de uma imagem baseada no node:slim conforme os arquivos no diretório ./app
