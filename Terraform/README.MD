@@ -46,7 +46,7 @@ As credenciais de acesso à console da AWS precisam ser configuradas previamente
   * amis: mapeamento de imagens do sistema operacional Amazon Linux para as regiões suportadas.
 #### Dados
   * aws_vpc: configuração feita para se usar sempre a VPC default da região selecionada.
-  * template_cloudinit_config: template do cloud-init para com instruções a serem executadas no primeiro boot da instância.
+  * template_cloudinit_config: template do cloud-init com instruções a serem executadas no primeiro boot da instância.
 
 A chave pública RSA para acesso à instância deve ser aplicada no recurso "aws_key_pair", ajustando-se o conteúdo da chave como valor para a chave "public_key".
 
